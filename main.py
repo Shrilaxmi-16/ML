@@ -65,7 +65,7 @@ def main():
         sns.lineplot(
           x='year', 
           y='Employment_demanded', 
-          hue='year', 
+          hue='State_x', 
           marker='o', 
           data=data, 
           ax=ax
