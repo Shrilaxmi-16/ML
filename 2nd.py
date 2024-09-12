@@ -6,12 +6,10 @@ from sklearn.metrics import mean_absolute_error, r2_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load the dataset
-@st.cache_data
-def load_data():
-    file_path = 'dataset-final.csv'  # Update with your correct file path
-    data = pd.read_csv(file_path)
-    return data
+with st.expander('Data'):
+  st.write('## Dataset')
+  data= pd.read_csv('https://raw.githubusercontent.com/sumukhahe/ML_Project/main/data/dataset.csv')
+  data
 
 # Preprocessing
 def preprocess_data(data):
