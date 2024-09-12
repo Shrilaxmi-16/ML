@@ -6,4 +6,3 @@ scipy
 pandas-profiling 
 statsmodels
 pydantic<2
-ydata_profiling
