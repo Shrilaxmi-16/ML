@@ -62,6 +62,8 @@ def main():
     st.subheader("MGNREGA Demand Over Years")
     if 'year' in state_data.columns and 'Employment_demanded' in state_data.columns:
         fig, ax = plt.subplots()
+        sns.set(style="whitegrid")
+        fig, axes = plt.subplots(3, 1, figsize=(12, 18))
         sns.lineplot(
           x='year', 
           y='Employment_demanded', 
