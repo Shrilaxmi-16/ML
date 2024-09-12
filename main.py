@@ -67,7 +67,7 @@ def main():
           y='Employment_demanded', 
           hue='selected_state', 
           marker='o', 
-          data=data, 
+          data=state_data, 
           ax=ax
         )
 
