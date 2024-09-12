@@ -67,7 +67,7 @@ def main():
           y='Employment_demanded', 
           hue='year', 
           marker='o', 
-          data=filtered_data, 
+          data=data, 
           ax=ax
         )
 
