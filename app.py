@@ -7,12 +7,10 @@ import scipy.stats as stats
 from sklearn.linear_model import LinearRegression
 
 # Load the dataset
-@st.cache_data
-def load_data():
-    file_path = 'dataset-final.csv'  # Update with your correct file path
-    data = pd.read_csv(file_path)
-    return data
-
+with st.expander('Data'):
+  st.write('## Dataset')
+  data= pd.read_csv('https://raw.githubusercontent.com/sumukhahe/ML_Project/main/data/dataset.csv')
+  data
 # Filter data by state
 def get_state_data(data, state):
     return data[(data['State_x'] == state) | (data['State_y'] == state)]
@@ -39,9 +37,6 @@ def predict_future(data, column, years_to_predict):
 # Main function to render the Streamlit app
 def main():
     st.title('MGNREGA and Crop Analysis by State')
-
-    # Load the dataset
-    data = load_data()
 
     # State selection
     states = data['State_x'].unique()
