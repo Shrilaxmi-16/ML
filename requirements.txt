@@ -1,8 +1,5 @@
-streamlit 
+streamlit
 pandas
-matplotlib 
-seaborn 
-scipy 
-pandas-profiling 
-statsmodels
-pydantic<2
+seaborn
+matplotlib
+scipy
