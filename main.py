@@ -4,8 +4,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats as stats
-from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 
 # Load the dataset
 with st.expander('Data'):
@@ -36,11 +34,6 @@ def main():
     # Generate summary statistics
     st.subheader("Summary Statistics")
     st.write(state_data.describe())
-
-    # Pandas Profiling Report
-    st.subheader("Pandas Profiling Report")
-    profile = ProfileReport(state_data, minimal=True)
-    st_profile_report(profile)
 
     # Normality test using QQ plot
     st.subheader("Normality Test (QQ Plot)")
