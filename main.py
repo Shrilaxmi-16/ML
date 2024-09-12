@@ -19,10 +19,7 @@ def get_state_data(data, state):
 def main():
     st.title('MGNREGA and Crop Analysis by State')
 
-    # Load the dataset
-    data = load_data()
-
-    # State selection
+       # State selection
     states = data['State_x'].unique()
     selected_state = st.selectbox('Select a state', states)
 
