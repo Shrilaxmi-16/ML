@@ -62,8 +62,19 @@ def main():
     st.subheader("MGNREGA Demand Over Years")
     if 'year' in state_data.columns and 'Employment_demanded' in state_data.columns:
         fig, ax = plt.subplots()
-        sns.lineplot(x='year', y='Employment_demanded', data=state_data, ax=ax)
-        plt.title(f"MGNREGA Employment Demand Over Years in {selected_state}")
+        sns.lineplot(
+          x='year', 
+          y='Employment_demanded', 
+          hue='year', 
+          marker='o', 
+          data=filtered_data, 
+          ax=ax
+        )
+
+    # Setting title and labels
+        ax.set_title('Year-on-Year Employment Demanded (Sample States)')
+        ax.set_xlabel('Year')
+        ax.set_ylabel('Employment Demanded')
         st.pyplot(fig)
 
     # Production of the state each year
